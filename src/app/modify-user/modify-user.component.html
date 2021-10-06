@@ -1,0 +1,22 @@
+<h1 align='center'>{{b.balance}}</h1>
+
+<h1 align="center" class="display-2 text-info">Enter Balance </h1> 
+<div class="container">
+
+
+<form align='center' class="jumbotron" (ngSubmit)="onSubmit()">
+    
+       <div class="form-group">
+        <label class="form-label">Balance</label> 
+        <input type="number" class="form-contol" id="to"
+        [(ngModel)]="balance.balance"    name="balance" placeholder="Enter balance" step="any">
+        
+    </div>
+
+    <div class="form-group"><button type="submit" class="btn btn-danger">Add</button>
+    
+    </div>
+    
+
+</form>
+</div>

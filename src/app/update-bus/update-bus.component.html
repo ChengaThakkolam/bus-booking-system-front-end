@@ -1,0 +1,225 @@
+
+<form align='center' (ngSubmit)="onSubmit()">
+    <div style="margin-top: 50px;">
+    <table class="table bg-warning" style="font-size: large;">
+
+    <tr>
+       <td> <label class="form-label text-dark">Bus Name </label> </td>
+       <td> <input disabled type="text" class="form-contol text-success" id="busname"
+            [(ngModel)]="busSeatingModel.busname" name="busname"  >
+        </td>
+   
+
+       <td> <label class="form-label text-dark">Bus Number</label> </td>
+        <td><input disabled type="text" class="form-contol text-success" id="busnumber"
+            [(ngModel)]="busSeatingModel.busnumber" name="busnumber">
+        </td>
+   
+        <td> <label class="form-label text-dark">Bus seatingcapacity</label> </td>
+         <td><input disabled type="number" class="form-contol text-success" id="seatingcapacity"
+             [(ngModel)]="busSeatingModel.seatingcapacity" name="seatingcapacity" >
+         </td>
+   
+        <td> <label class="form-label text-dark">From City</label> </td>
+         <td><input disabled type="text" class="form-contol text-success" id="fromroute"
+             [(ngModel)]="busSeatingModel.fromroute" name="fromroute">
+         </td>
+    
+        <td> <label class="form-label text-dark">To City</label> </td>
+         <td><input disabled type="text" class="form-contol text-success" id="toroute"
+             [(ngModel)]="busSeatingModel.toroute" name="toroute">
+         </td>
+     </tr>
+
+    </table>
+
+    </div>
+
+    <div class="container jumbotron">
+    <table  style="font-size:20px;" class="table bg-dark">
+
+     <tr >
+       
+         <td>
+            <div class="text-danger" *ngIf="busSeatingModel.seat1==true">Seat1
+                <input disabled  type="checkbox" class="form-contol" id="seat1"
+                [(ngModel)]="busSeatingModel.seat1" name="seat1"  >
+            </div>
+
+            <div class="text-success" *ngIf="busSeatingModel.seat1==false">Seat1
+                <input  type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat1" name="seat1"  >
+            </div>
+
+         </td>
+
+
+         <td>
+            <div class="text-danger" *ngIf="busSeatingModel.seat2==true">Seat2
+                <input disabled type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat2" name="seat2"  >
+            </div>
+ 
+            <div class="text-success" *ngIf="busSeatingModel.seat2==false"> Seat2
+                <input type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat2" name="seat2"  >
+            </div>
+ 
+         </td>
+     </tr>
+
+   
+     
+
+     <tr >
+       
+        <td>
+           <div class="text-danger" *ngIf="busSeatingModel.seat3==true"> Seat3
+               <input disabled type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat3" name="seat3"  >
+           </div>
+
+           <div class="text-success" *ngIf="busSeatingModel.seat3==false">Seat3
+               <input  type="checkbox" class="form-contol"
+               [(ngModel)]="busSeatingModel.seat3" name="seat3"  >
+           </div>
+
+        </td>
+
+
+        
+        <td>
+           <div class="text-danger" *ngIf="busSeatingModel.seat4==true">Seat4
+               <input disabled type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat4" name="seat4"  >
+           </div>
+
+           <div class="text-success" *ngIf="busSeatingModel.seat4==false">Seat4
+               <input type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat4" name="seat4"  >
+           </div>
+
+        </td>
+     </tr>
+     
+     <tr >
+        
+         <td>
+            <div class="text-danger" *ngIf="busSeatingModel.seat5==true"> Seat5
+                <input disabled type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat5" name="seat5"  >
+            </div>
+
+            <div class="text-success" *ngIf="busSeatingModel.seat5==false">Seat5
+                <input  type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat5" name="seat5"  >
+            </div>
+
+         </td>
+
+
+         <td>
+            <div class="text-danger" *ngIf="busSeatingModel.seat6==true">Seat6
+                <input disabled type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat6" name="seat6"  >
+            </div>
+ 
+            <div class="text-success" *ngIf="busSeatingModel.seat6==false">Seat6
+                <input type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat6" name="seat6"  >
+            </div>
+ 
+         </td>
+     </tr>
+     
+
+     
+     <tr >
+       
+        <td>
+           <div class="text-danger" *ngIf="busSeatingModel.seat7==true">Seat7
+               <input disabled type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat7" name="seat7"  >
+           </div>
+
+           <div class="text-success" *ngIf="busSeatingModel.seat7==false">Seat7
+               <input  type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat7" name="seat7"  >
+           </div>
+
+        </td>
+
+
+        <td>
+            <div class="text-danger" *ngIf="busSeatingModel.seat8==true">Seat8
+                <input disabled type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat8" name="seat8"  >
+            </div>
+
+            <div class="text-success" *ngIf="busSeatingModel.seat8==false">Seat8
+                <input  type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat8" name="seat8"  >
+            </div>
+
+         </td>
+     </tr>
+    
+    
+
+     <tr >
+       
+        <td>
+           <div class="text-danger" *ngIf="busSeatingModel.seat9==true">Seat9
+               <input disabled type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat9" name="seat9"  >
+           </div>
+
+           <div class="text-success" *ngIf="busSeatingModel.seat9==false">Seat9
+               <input  type="checkbox" class="form-contol" 
+               [(ngModel)]="busSeatingModel.seat9" name="seat9"  >
+           </div>
+
+        </td>
+
+
+        <td>
+            <div class="text-danger" *ngIf="busSeatingModel.seat10==true">Seat10
+                <input disabled type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat10" name="seat10"  >
+            </div>
+ 
+            <div class="text-success" *ngIf="busSeatingModel.seat10==false">Seat10
+                <input  type="checkbox" class="form-contol" 
+                [(ngModel)]="busSeatingModel.seat10" name="seat10"  >
+            </div>
+ 
+         </td>
+     </tr>
+
+    
+
+    <tr><td><button type="submit" class="btn btn-success">Proceed</button>
+        </td>
+
+
+    </tr>
+    
+</table>
+    </div>
+</form>
+
+<div class="container" *ngFor="let res of bookingResponseModel | keyvalue">
+
+    <table class="table table-striped  bg-dark" > 
+            <tr class="text-light">
+                    <td>
+                        {{res.key}}
+                    </td>
+
+                    <td  class="align-items-start"> 
+                        {{res.value}}
+                    </td>
+            </tr>
+    </table>
+
+</div>

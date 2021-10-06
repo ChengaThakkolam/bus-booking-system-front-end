@@ -1,0 +1,72 @@
+
+<h1 align="center" class="display-2 text-info" >Search Buses </h1>  
+<form align='center' class="container jumbotron" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+        <label class="form-label">From City</label> 
+         <input type="text" class="form-contol" id="from"
+            [(ngModel)]="searchModel.from" name="from">
+        
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">To City</label> 
+        <input type="text" class="form-contol" id="to"
+            [(ngModel)]="searchModel.to" name="to" >
+        
+    </div>
+
+    <div class="form-group"><button type="submit" class="btn btn-danger">Search</button>
+    
+    </div>
+    
+
+</form>
+
+
+<div class="container" *ngFor="let b of busSeatingModel">
+  
+        
+    <div class="container">
+        <table class="table jumbotron">
+            <tr>
+                <td>
+                   <label for=""> BusName <span class="text-info" style="font-size: large;">{{b.busname | uppercase }}</span> </label> &nbsp; &nbsp;
+                    <label for="">Number <span class="text-info" style="font-size: large;">{{b.busnumber }}</span></label>  &nbsp; &nbsp;
+                    <label for="">Form City <span class="text-info" style="font-size: large;">{{b.fromroute | uppercase }}</span></label> &nbsp; &nbsp;
+                    <label for="">To City <span class="text-info" style="font-size: large;">{{b.toroute | uppercase }}</span></label>
+                </td>
+            </tr>
+
+           <tr>
+
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     View Seats &nbsp; &nbsp; 
+                     <div  style="font-size: large;">
+                       <span *ngIf="b.aviableSeats>3" class="text-success">AvialableSeats {{b.aviableSeats}} </span> 
+                       <span *ngIf="b.aviableSeats<3" class="text-danger">AvialableSeats {{b.aviableSeats}} </span>
+                     </div>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                     
+                        <table>
+                            <tr><td><button (click)="updateBus(b.busnumber)" class="btn btn-success">Select Seats</button>
+                            </td>
+                      </tr>
+                        </table>
+                       
+                    
+                   
+                    </div>
+                </div>
+                 </td>
+           </tr> 
+        </table>
+      </div>
+        
+
+  
+</div>
+

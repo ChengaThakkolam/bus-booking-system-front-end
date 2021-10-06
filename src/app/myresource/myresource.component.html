@@ -1,0 +1,37 @@
+<h3 align='center' style="margin-top: 30px;" class="text-primary">Your Booking Details</h3>
+
+<div class="container" *ngFor="let emp of myResource; index as i">
+    <label for="" class="text-dark" style="font-size: large;">{{i+1}}</label>
+<table align="center" style="font-size: 20px;" class="table bg-dark text-light"  >
+
+    <tr>
+        <td class="text-info">User Reg Id</td>
+        <td class="text-warning">{{emp.regId}}</td>
+    </tr>
+
+    <tr >
+        <td  class="text-info">User Name</td>
+        <td  class="text-warning">{{emp.name}}</td>
+    </tr>
+
+    <tr>
+        <td  class="text-info">Mobile Number</td>
+        <td  class="text-warning">{{emp.mobile}}</td>
+    </tr>
+
+    <tr>
+        <td  class="text-info">Seats Numbers</td>
+        <td  class="text-warning">{{emp.seatNumber}}</td>
+
+        <td class="text-info">From City <span class="text-warning">{{emp.fromCity}}</span></td>
+        <td class="text-info">To City <span class="text-warning">{{emp.toCity}}</span></td>
+    </tr>
+
+    <tr>
+        <td class="text-info">Price</td>
+        <td class="text-warning">{{emp.price}}</td>
+    </tr>
+
+
+  </table>
+</div>

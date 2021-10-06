@@ -1,0 +1,43 @@
+
+<h3 align='center' style="font-size: 20px;" class="text-primary">{{title}}</h3>
+<div style="margin-left: 100px;margin-right: 100px;">
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li  class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="bus" routerLinkActive="active">Search Bus</a>
+        </li>
+        
+        
+        <li *ngIf="isDisplay()==false"  class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="addUser" routerLinkActive="active">User Registration</a>
+        </li>
+
+        <li *ngIf="isDisplay()==false"  class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+
+        <li *ngIf="isDisplay()==true"  class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="modify" routerLinkActive="active">Add Balance</a>
+        </li>
+        
+        <li *ngIf="isDisplay()==true" class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="history" routerLinkActive="active">Booking History</a>
+        </li>
+
+        <li *ngIf="isDisplay()==true"  class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="logOut" routerLinkActive="active">LogOut</a>
+        </li>
+
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+</div>
+
+<router-outlet></router-outlet>
+

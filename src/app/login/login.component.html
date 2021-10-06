@@ -1,0 +1,32 @@
+
+
+<h1 align='center' class="text-dark">Login page </h1>
+
+<form align='center'  (ngSubmit)="onSubmit()">
+    <table class="container">
+    <tr>
+       <td> <label class="form-label">Mobile</label> </td>
+       <td> <input type="text" class="form-contol" id="mobile"
+            [(ngModel)]="login.mobile" name="mobile"  >
+        </td>
+
+       
+    </tr>
+
+    <tr >
+       <td> <label class="form-label">Password</label> </td>
+        <td> <input type="text" class="form-contol" id="password"
+            [(ngModel)]="login.password" name="password" >
+        </td>
+
+       
+    </tr>
+
+    <tr><td><button  type="submit" class="btn btn-danger">Login</button>
+        </td>
+    </tr>
+    
+</table>
+</form>
+
+<router-outlet></router-outlet>
