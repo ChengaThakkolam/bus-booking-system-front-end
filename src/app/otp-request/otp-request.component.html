@@ -1,0 +1,32 @@
+<h1 align='center' class="text-dark">ForgetPassword </h1>
+
+<form align='center'  (ngSubmit)="onSubmit()">
+    <table class="container">
+    <tr>
+       <td> <label class="form-label">Mobile</label> </td>
+       <td> <input type="text" class="form-contol" id="mobile"
+            [(ngModel)]="otpreq.mobile" name="mobile"  >
+        </td>
+
+       
+    </tr>
+
+    <tr >
+       <td> <label class="form-label">Email</label> </td>
+        <td> <input type="text" class="form-contol" id="password"
+            [(ngModel)]="otpreq.email" name="email" >
+        </td>
+
+       
+    </tr>
+
+    
+
+    <tr><td><button  type="submit" class="btn btn-danger">Forget</button>
+        </td>
+    </tr>
+    
+</table>
+</form>
+
+

@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   }
 
   LoginUser(){
-    this.http.post<any>("http://localhost:9090/login",this.login).subscribe(
+    this.http.post<any>("http://bus-booking-app.us-east-1.elasticbeanstalk.com/login",this.login).subscribe(
       (data)=>{
         this.loginResponse=data;
         console.log(this.loginResponse);
@@ -59,6 +59,17 @@ export class LoginComponent implements OnInit {
 
       }
       
+    )
+  }
+
+
+  facebooklogin(){
+    console.log("facebook login request begin");
+    this.http.get("http://localhost:9090/user").subscribe(
+      (data)=>{
+        console.log("facebook login ");
+              console.log(data);
+      }
     )
   }
 

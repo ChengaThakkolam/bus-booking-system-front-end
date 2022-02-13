@@ -30,7 +30,7 @@ export class SearchbusComponent implements OnInit {
 
 
   searchBuses(){
-    this.http.post<BusSeatingModel[]>("http://localhost:9090/searchbuses",this.searchModel).subscribe(
+    this.http.post<BusSeatingModel[]>("http://bus-booking-app.us-east-1.elasticbeanstalk.com/searchbuses",this.searchModel).subscribe(
       (data)=>{
         this.busSeatingModel=data;
 

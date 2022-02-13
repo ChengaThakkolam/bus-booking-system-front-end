@@ -20,7 +20,7 @@ export class ModifyUserComponent implements OnInit {
 
   onSubmit(){
       let mobile=sessionStorage.getItem('mobile');
-      this.http.post("http://localhost:9090/setbalance/"+mobile, this.balance).subscribe(
+      this.http.post("http://bus-booking-app.us-east-1.elasticbeanstalk.com/setbalance/"+mobile, this.balance).subscribe(
         (data)=>
         {
          console.log(data);

@@ -13,13 +13,20 @@ import { MyresourceComponent } from './myresource/myresource.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { LoginComponent } from './login/login.component';
 import { StartingComponent } from './starting/starting.component';
-import { DisplayBusComponent } from './display-bus/display-bus.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LogOutComponent } from './log-out/log-out.component';
 import { UpdateBusComponent } from './update-bus/update-bus.component';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
-import { DashbordComponent } from './dashbord/dashbord.component';
+
 import { AuthGuard } from './auth.guard';
+import { PracticeComponent } from './practice/practice.component';
+import { OtptypeComponent } from './otptype/otptype.component';
+import { OtpRequestComponent } from './otp-request/otp-request.component';
+import { ForgetPasswordVerifyOtpComponent } from './forget-password-verify-otp/forget-password-verify-otp.component';
+import { UUIDComponent } from './uuid/uuid.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
+import { ImagefetchComponent } from './imagefetch/imagefetch.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +37,17 @@ import { AuthGuard } from './auth.guard';
     UserRegistrationComponent,
     LoginComponent,
     StartingComponent,
-    DisplayBusComponent,
+    
     LogOutComponent,
     UpdateBusComponent,
     ModifyUserComponent,
-    DashbordComponent
+    PracticeComponent,
+    OtptypeComponent,
+    OtpRequestComponent,
+    ForgetPasswordVerifyOtpComponent,
+    UUIDComponent,
+    FileuploadComponent,
+    ImagefetchComponent
   ],
   imports: [
     BrowserModule,

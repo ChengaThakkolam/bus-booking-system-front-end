@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DisplayBusComponent } from './display-bus.component';
+import { UUIDComponent } from './uuid.component';
 
-describe('DisplayBusComponent', () => {
-  let component: DisplayBusComponent;
-  let fixture: ComponentFixture<DisplayBusComponent>;
+describe('UUIDComponent', () => {
+  let component: UUIDComponent;
+  let fixture: ComponentFixture<UUIDComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplayBusComponent ]
+      declarations: [ UUIDComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DisplayBusComponent);
+    fixture = TestBed.createComponent(UUIDComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

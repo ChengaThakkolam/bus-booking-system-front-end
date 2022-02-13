@@ -1,0 +1,14 @@
+
+<div class="container" *ngFor="let image of allImages">
+<div class="card bg-light" style="width: 30rem;">
+    <img class="card-img-top" [src]="fetchData(image.fileName)" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button class="btn btn-outline-danger" (click)="delete(image.fileName)">Delete</button>
+    </div>
+  </div>
+
+  <div style="margin-top: 30px;">
+
+  </div>
+</div>

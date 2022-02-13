@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval, timer } from 'rxjs';
+import { BusServiceService } from '../bus-service.service';
 
 @Component({
   selector: 'app-log-out',
@@ -10,7 +11,7 @@ import { interval, timer } from 'rxjs';
 })
 export class LogOutComponent implements OnInit {
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router,private busService:BusServiceService) { }
 
 
 
@@ -20,7 +21,7 @@ export class LogOutComponent implements OnInit {
     let mobile=sessionStorage.getItem('mobile');
     console.log("http://localhost:9090/logout/"+mobile);
 
-    this.http.get("http://localhost:9090/logout/"+mobile).subscribe(
+    this.http.get("http://bus-booking-app.us-east-1.elasticbeanstalk.com/logout/"+mobile).subscribe(
       (data)=>{
      
         console.log(data);

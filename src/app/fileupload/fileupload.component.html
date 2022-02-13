@@ -1,0 +1,31 @@
+
+
+
+
+<div class="container text-center">
+    <img [src]="url" alt="img src missing" height="300" width="500">
+    <input class="form-control" type="file" 
+            (change)="onChange($event)" style="width: 350px;">
+  
+    <button (click)="onUpload()" 
+        class="btn btn-success">
+        Upload
+    </button>
+</div>
+
+
+
+
+
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+    <h3>Loading ...</h3>
+</div>
+
+<div class="container" *ngIf="status">
+ 
+    
+    <div class="alert alert-success" role="alert">
+        Pic Saving Successfull
+      </div>
+</div>

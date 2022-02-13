@@ -17,7 +17,7 @@ export class MyresourceComponent implements OnInit {    // Booking History
   ngOnInit(): void {
 
     let mobile=sessionStorage.getItem('mobile');
-    this.http.get("http://localhost:9090/bookinghistory/"+mobile).subscribe(
+    this.http.get("http://bus-booking-app.us-east-1.elasticbeanstalk.com/bookinghistory/"+mobile).subscribe(
       (data)=>{
         console.log(data);
         this.myResource=data;

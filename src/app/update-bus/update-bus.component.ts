@@ -43,7 +43,7 @@ export class UpdateBusComponent implements OnInit {
      // busService.busSeatBooking(mobile,this.busSeatingModel)
     
     let mobile=sessionStorage.getItem('mobile');
-    this.http.post("http://localhost:9090/busbooking/"+mobile,  this.busSeatingModel).subscribe(
+    this.http.post("http://bus-booking-app.us-east-1.elasticbeanstalk.com/busbooking/"+mobile,  this.busSeatingModel).subscribe(
       (data)=>{
 
         console.log(" user submit the form ");
